@@ -6,7 +6,7 @@ import Image from "next/image";
 
 import {getDate} from "../utils/utils";
 
-export default function Post({post, featuredMedia}) {
+export default function Post({post}) {
 
     return (
         <div className="card mb-3" style={{maxWidth: "540px"}}>
@@ -14,7 +14,6 @@ export default function Post({post, featuredMedia}) {
                 <div className="col-md-4">
                     <Link href={`/posts/${post.slug}`}>
                         <a>
-                            <Image src={featuredMedia["media_details"].sizes.medium["source_url"]} width={180} height={120} alt={featuredMedia["alt_text"]}/>
                         </a>
                     </Link>
                 </div>
