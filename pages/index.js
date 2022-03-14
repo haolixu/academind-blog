@@ -7,7 +7,7 @@ import Post from "../components/Post";
 export default function Home({posts}) {
 
   const jsxPosts = posts.map(post => {
-    const featuredMedia = post['_embedded']['wp:featuredmedia'];
+    const featuredMedia = post['_embedded'];
     return (
       <Post post={post} featuredMedia={featuredMedia} key={post.id}/>
     )
