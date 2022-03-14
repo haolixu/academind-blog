@@ -31,10 +31,7 @@ export default function Home({posts}) {
             <h2 className="pb-3">Our blog posts</h2>
             {jsxPosts}
           </div>
-          <div className="col-lg-4">
-            <h2 className="pb-3">Events</h2>
-            {jsxEvents}
-          </div>
+         
         </div>
       </div>
     </>
@@ -45,11 +42,9 @@ export default function Home({posts}) {
 export async function getStaticProps({ params }) {
 
   const posts = await getPosts();
-  const events = await getEvents();
   return {
     props: {
-     posts,
-     events
+     posts
     },
     revalidate: 10, // In seconds
   }
